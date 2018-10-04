@@ -1,16 +1,18 @@
 package aflevering1_opg3;
 
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.Random;
 
 public class randomizer {
-	public static void main(String[] args) {
+	public static int random(int max) {
 		Random ran = new Random();
-		int max=100;
-		int min =-100;
-		int s = ran.nextInt(max + 1 + min) - min;
-		System.out.println(s);
+//		int min = 0;
+		int s;
+		do {
+			s = ran.nextInt(2*max + 1) - max;
+		} while (s == 0);
+
+		return s;
 
 	}
+
 }
